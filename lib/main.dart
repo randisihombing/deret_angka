@@ -57,7 +57,7 @@ class NumberSeriesPage extends StatelessWidget {
                           BlocProvider.of<NumberSeriesBloc>(context).add(GenerateSeries(n: n, seriesType: SeriesType.type1));
                         }
                       },
-                      child: const Text('Type 1'),
+                      child: const Text('1'),
                     ),
                     ElevatedButton(
                       onPressed: () {
@@ -66,7 +66,7 @@ class NumberSeriesPage extends StatelessWidget {
                           BlocProvider.of<NumberSeriesBloc>(context).add(GenerateSeries(n: n, seriesType: SeriesType.type2));
                         }
                       },
-                      child: const Text('Type 2'),
+                      child: const Text('2'),
                     ),
                   ],
                 ),
@@ -80,7 +80,7 @@ class NumberSeriesPage extends StatelessWidget {
                           BlocProvider.of<NumberSeriesBloc>(context).add(GenerateSeries(n: n, seriesType: SeriesType.type3));
                         }
                       },
-                      child: const Text('Type 3'),
+                      child: const Text('3'),
                     ),
                     ElevatedButton(
                       onPressed: () {
@@ -89,7 +89,7 @@ class NumberSeriesPage extends StatelessWidget {
                           BlocProvider.of<NumberSeriesBloc>(context).add(GenerateSeries(n: n, seriesType: SeriesType.type4));
                         }
                       },
-                      child: const Text('Type 4'),
+                      child: const Text('4'),
                     ),
                   ],
                 ),
@@ -97,7 +97,7 @@ class NumberSeriesPage extends StatelessWidget {
                 BlocBuilder<NumberSeriesBloc, NumberSeriesState>(
                   builder: (context, state) {
                     if (state is NumberSeriesInitial) {
-                      return const Text('Masukkan N dan pilih tipe deret');
+                      return const Text('Hasil akan tampil di bawah ini');
                     } else if (state is NumberSeriesLoaded) {
                       return Text(state.series, style: const TextStyle(fontSize: 20));
                     } else {
